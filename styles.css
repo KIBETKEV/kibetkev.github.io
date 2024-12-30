@@ -1,0 +1,249 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:#303640;
+    color: #f0f0f0;
+    line-height: 1.6;
+    margin: 0;
+}
+/* Center the Image */
+.Img1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh; /* Full viewport height */
+}
+
+/* Style the Image */
+.Img1 {
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Ensure square dimensions for a perfect circle */
+    border-radius: 100%; /* Makes the image circular */
+    border: 5px inset #ffaa00; /* Inset border style with your specified color */
+    line-height: 1; /* Line height for any potential text alignment */
+    margin: 10px; /* Adds spacing around the image */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-image: ('url/Users/kelvinkibet/Desktop/portfolio/gradient-ui-ux-background-illustrated_23-2149050182.avif'); 
+    background-size: cover; 
+    background-position: center; 
+    color: #ffaa00; 
+    position: relative; 
+}
+
+/* Optional: Add a semi-transparent overlay for better text readability */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #303640; /* Black overlay with 50% opacity */
+    z-index: 1; /* Ensures the overlay is behind the text */
+}
+
+header h1,
+header p {
+    position: relative; /* Keeps text above the overlay */
+    z-index: 2;
+}
+
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #d3d3d3;
+}
+
+/* Navigation */
+nav {
+    
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style: none;
+    text-align: center;
+    text-decoration: underline; 
+    color: inherit;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffaa00;
+}
+
+/* Main Content */
+.section {
+    padding: 50px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #ffaa00;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+/* General Styling for Skills Sections */
+.Ux {
+    margin: 20px 0;
+}
+
+.Development {
+    margin: 20px 0;
+}
+
+/* Grid Container for UX/UI and Development Sections */
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 100px; /* Space between columns */
+    padding: 10px;
+    background-color: #303640; 
+    border-radius: 10px; 
+}
+
+/* Individual Sections Styling */
+.skills-container h2 {
+    color: #ffaa00; /* Section heading color */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skills-container ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+}
+
+.skills-container li {
+    padding: 5px 0; /* Spacing between list items */
+    font-size: 1.2rem;
+    color: #f0f0f0; /* Text color */
+    text-align: center;
+}
+.Ux li {
+    text-align: right;
+}
+.Development li {
+    text-align: left;
+}
+.Development h2 {
+    text-align: left;
+}
+.Ux h2 {
+    text-align: right;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* Stacks the sections vertically */
+        text-align: center; /* Optional: Center-align content for small screens */
+    }
+}
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    background: #ffaa00;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #f0f0f0;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    text-align: center;
+    padding: 20px 0;
+    color: #d3d3d3;
+    font-size: 0.9rem;
+}
+/* Portfolio Items */
+.portfolio-item {
+    background: #303640;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+    overflow: hidden;
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    background: #ffaa00;
+    color: #1e1e1e;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.portfolio-item h3 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.portfolio-item p {
+    font-size: 0.9rem;
+    color: #d3d3d3;
+}
